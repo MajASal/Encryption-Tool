@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="content-section">
+      <form class="" action ='/encryption' method='POST'>
+        {{form.hidden_tag() }}
+          <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Encryption</legend>
+            <div class="form-group">
+              {{ form.encryption_input.label(class="form-control-label")}}
+              {{ form.encryption_input(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-list" id='encryption_type'>
+              {{ form.encryption_type.label }} 
+              {{ form.encryption_type(**{"onchange":"changeOffsetVisibility()"}) }}
+          </div>
+          <div id='offset' class="content_section">
+              {{ form.offset.label (class="form-control-label") }} 
+              {{ form.offset(class="form-control form-control-lg")  }}
+          </div>
+          </fieldset>
+
+          <div class="form-group">
+            {{ form.submit(class = "btn-outline-info") }}
+          </div>
+      </form>
+    </div>
+{% endblock content %}

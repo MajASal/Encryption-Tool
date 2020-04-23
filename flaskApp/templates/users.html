@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="content-section">
+    <div class="result">
+        {% for users in user %}
+            <p>
+                <ol style="list-style-type:circle">
+                    <li> 
+                        {{users.name}}
+                    </li>
+                </ol>
+            </p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

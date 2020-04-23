@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="content-section">
+    <legend class="border-bottom mb-4">Result</legend>
+  <div>
+      <p><span>Type of encryption: </span><span>{{ encryptiontype }}</span></p>
+      <p id="offsetResult"><span >Offsetfactor: </span><span>{{ offset }}</span></p>
+      <p><span>Unencoded text: </span><span>{{unencoded_string}}</span></p>
+      <p><span>Encoded text: </span><span>{{encrypted_string}}</span></p>
+    </div>
+</div>
+{% endblock content %}
